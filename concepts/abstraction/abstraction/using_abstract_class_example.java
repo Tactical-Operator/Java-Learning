@@ -1,4 +1,4 @@
-// Banking System using Abstract Class
+// Abstraction example - Banking System using Abstract Class
 
 
 abstract class BankAccount{
@@ -68,7 +68,7 @@ class CurrentAccount extends BankAccount{
     
 }
 
-public class Main{ 
+public class using_abstract_class_example{ 
     public static void main(String[] args){
 
         BankAccount account1=new SavingsAccount("101", "Ashwin Jadhav", 50000);
