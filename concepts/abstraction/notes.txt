@@ -1,0 +1,26 @@
+How to Achieve Abstraction:
+Using an Abstract Class
+
+The user only knows that pay() exists; the payment implementation is hidden.
+
+Using an Interface:
+
+Different payment methods can implement the same interface.
+
+Which Should You Use?
+
+Use an abstract class when :
+
+---> Related classes share common fields or methods.
+
+---> You want partial implementation.
+
+---> There is an "is-a" relationship (e.g., Dog is an Animal).
+
+Use an interface when :
+
+---> You want to define a capability or contract.
+
+---> Unrelated classes can share the same behavior.
+
+---> You need multiple inheritance of behavior.
