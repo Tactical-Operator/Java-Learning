@@ -3,9 +3,9 @@
 
 abstract class BankAccount{
 
-    protected String accountNumber;
-    protected String holderName;
-    protected double balance;
+     String accountNumber;
+     String holderName;
+     double balance;
 
 
     public BankAccount(String accountNumber,String holderName,double balance){
