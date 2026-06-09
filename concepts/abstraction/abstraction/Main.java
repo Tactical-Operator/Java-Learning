@@ -39,21 +39,23 @@ abstract class BankAccount{
         System.out.println("Balance : "+balance);
     }
     
-    // Abstract method
+    // Abstract method 
     public abstract double calculateInterest();
 }
 
+// Savings Account class
 class SavingsAccount extends BankAccount{
     public SavingsAccount(String accNo,String name, double balance){
         super(accNo,name,balance);
     }
 
-    @Override
+    @Override // subclasses must implement abstract methods 
     public double calculateInterest(){
         return balance *0.05;
     }
 }
 
+// Current Account Class
 class CurrentAccount extends BankAccount{
     public CurrentAccount(String accNo,String name,double balance){
         super(accNo,name,balance);
