@@ -46,7 +46,7 @@
 // }
 
 // blueprint about a book
-class Book{ // book must have its own data ,like a book is a seperate real-world thing
+public class Book{ // book must have its own data ,like a book is a seperate real-world thing
     String Book_name;
     String Author;
     int stock_left;

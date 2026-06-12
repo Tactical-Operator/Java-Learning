@@ -23,6 +23,7 @@ class example {
     public static void main(String[] args) {
 
         Student object = new Student();
+        Student object2 =new Student();
         object.setAge(10);
         object.setStudent("Ashwin Jadhav");
 
