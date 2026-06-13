@@ -62,7 +62,7 @@ public class Book{ // book must have its own data ,like a book is a seperate rea
         this.Price_of_the_book=Price_of_the_book;
     }
 
-    void display()//display the available boos in the store 
+    void display()//display the available books in the store 
     {
         
         System.out.println(
