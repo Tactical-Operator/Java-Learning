@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class AnimalFarm {
     public static void main(String []args){
         Scanner sc=new Scanner(System.in);
-        Animal[] animals=new Animal[4];
+        Animal[] animals=new Animal[4]; // array of references
         int anmlIdx=0;
         while(true){
             System.out.println(  " Press 1 to view the animals "+
@@ -32,7 +32,8 @@ public class AnimalFarm {
                 if((animalchoice.equals("1"))){
                     System.out.println("Enter the name of the dog");
                     String dogName=sc.nextLine();
-                    Animal anmlTmp=new Dog(dogName);
+                    // Animal-"I'll treat is like Animal" anmltmp can point to any object that is a animal
+                    Animal anmlTmp=new Dog(dogName); // creates a real dog object in heap memory
                     System.out.println("Enter what the dog eats");
                     String dogFood=sc.nextLine();
                     anmlTmp.setFood(dogFood);

@@ -19,7 +19,7 @@ public abstract class Animal{
     }
 
     public String toString(){
-        return name.concat(" says ").concat(sound().concat(" and eats").concat(food));
+        return name.concat(" says ").concat(sound().concat(" and eats ").concat(food));
     }
 }
 
