@@ -6,7 +6,7 @@ class outerclass{
             }
         }
         // object of inner class should be made inside the same method
-        // because non static methods can only be caleld through an object
+        // because non static methods can only be called through an object
         MethodLocalInner inner=new MethodLocalInner(); 
         inner.display();
     }
