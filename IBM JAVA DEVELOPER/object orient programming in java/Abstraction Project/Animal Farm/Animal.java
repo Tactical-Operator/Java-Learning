@@ -19,8 +19,11 @@ public abstract class Animal{
     }
 
     public String toString(){
+    
         return name.concat(" says ").concat(sound().concat(" and eats ").concat(food));
+                     // here the sound() refers to sound() of the current Object lets say Dog
     }
+
 }
 
 class Dog extends Animal{
