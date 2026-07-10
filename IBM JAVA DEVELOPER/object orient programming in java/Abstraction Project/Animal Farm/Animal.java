@@ -3,7 +3,7 @@ public abstract class Animal{
     private String food;
 
     public Animal(String name){
-        this.name=name;
+        this.name=name;// refer to the objet currently being created
     }
 
     public String sound(){
@@ -19,11 +19,8 @@ public abstract class Animal{
     }
 
     public String toString(){
-    
-        return name.concat(" says ").concat(sound().concat(" and eats ").concat(food));
-                     // here the sound() refers to sound() of the current Object lets say Dog
+         return this.name + " says " + this.sound() + " and eats " + this.food;
     }
-
 }
 
 class Dog extends Animal{
