@@ -33,3 +33,4 @@ class example {
         System.out.println(object.getStudent());
     }
 }
+//
