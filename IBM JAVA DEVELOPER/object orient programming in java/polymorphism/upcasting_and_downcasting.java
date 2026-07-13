@@ -16,12 +16,16 @@ class upcasting_and_downcasting{
 
 
         //upcasting-----
+
+        //type casting child class reference to a parent class reference
         Parent p=new Child();
         p.name="Ashwin Jadhav";
         System.out.println(p.name);
         p.method();// parent class method is overridden method hence Child's method will be exceuted.
 
         // downcasting implicitly
+
+        // 
         Child c=(Child)p;
 
         c.id=1;
