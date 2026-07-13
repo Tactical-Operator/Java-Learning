@@ -45,7 +45,7 @@ public class AnimalFarm {
                     System.out.println("Enter the name of the dog");
                     String dogName = sc.nextLine();
 
-                    Animal anmlTmp = new Dog(dogName);
+                    Animal anmlTmp = new Dog(dogName);// java first sees new Dog("bruno")
 
                     System.out.println("Enter what the dog eats");
                     String dogFood = sc.nextLine();
