@@ -25,7 +25,7 @@ class upcasting_and_downcasting{
 
         // downcasting implicitly
 
-        // 
+        // type casting parent reference to a child reference 
         Child c=(Child)p;
 
         c.id=1;
