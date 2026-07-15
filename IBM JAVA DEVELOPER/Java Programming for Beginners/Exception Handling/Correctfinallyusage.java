@@ -7,7 +7,7 @@ class Correctfinallyusage
     {
        FileReader file=null;
        try{
-        file=new FileReader("example.txt"); // prepare the file so Java can read from it
+        file=new FileReader("exale.txt"); // prepare the file so Java can read from it
         System.out.println("Done");
         
         System.out.println("");
