@@ -15,17 +15,17 @@ class upcasting_and_downcasting{
     public static void main(String []args){
 
 
-        // upcasting-----
-        // due to which the object is allowed to only access 
-        // only parent class members and child class specified members(overriden methods),
-        // but not all members
+        //upcasting-----
+
+        //type casting child class reference to a parent class reference
         Parent p=new Child();
         p.name="Ashwin Jadhav";
         System.out.println(p.name);
         p.method();// parent class method is overridden method hence Child's method will be exceuted.
 
-        // downcasting explicitly
-        // can acquire the properties of the parent object
+        // downcasting implicitly
+
+        // type casting parent reference to a child reference 
         Child c=(Child)p;
 
         c.id=1;
