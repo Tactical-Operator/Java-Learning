@@ -12,7 +12,7 @@
 // - abstract method tune() that returns a String
 // - abstract method adjustPitch(boolean up) that returns a String (up means increase pitch)
 
-  //
+
 // Step 3: Create an interface Maintainable
 // This should include:
 // - abstract method clean() that returns a String
@@ -51,3 +51,54 @@
 //   2. Iterates through the array calling play() for each instrument
 //   3. Demonstrates polymorphism by testing if each instrument is Tunable or Maintainable
 //      and if so, calls the appropriate methods
+
+
+
+// always remember that whenever we see a private variable use getterr and setter in the same class 
+abstract class Instrument{
+
+    private String name;
+    protected int year;
+
+    public Instrument(String name,int year){
+        this.name =name;
+        this.year =year;
+    }
+
+    public abstract String play();
+
+    public String getInstrumentDetails(){
+        return "Instrument: "+ name + ", Year: "+year;
+    }
+
+    public String getName(){
+        return name;
+    }
+}
+
+interface Tunable{
+
+    String tune();
+    String adjustPitch(boolean up);
+}
+
+interface Maintainable {
+
+    String clean();
+    String inspect();
+}
+
+class StringedInstrument extends Instrument{
+
+    private int numberofStrings;
+
+    public StringedInstrument(String name,int year,int numberofStrings){
+        super(name, year);
+        this.numberofStrings=numberofStrings;                                                      
+    }
+
+    @Override
+    public String play(){
+        return "Playing the stringed instrument";
+    }
+}
