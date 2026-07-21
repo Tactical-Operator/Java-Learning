@@ -223,12 +223,12 @@ public class MusicShop{
 
             if(instrument instanceof Tunable)// Does the object stored in instrument implement the Tunable interface 
                 {
-                Tunable tunableInstrument = (Tunable) instrument;
+                Tunable tunableInstrument = (Tunable) instrument; // type casting it to use the tunable's methods
                 System.out.println(tunableInstrument.tune());
                 System.out.println(tunableInstrument.adjustPitch(true));
             }
 
-              if (instrument instanceof Maintainable) {
+              if (instrument instanceof Maintainable) { // type casting it to use the maintainable's methods
                 Maintainable maintainableInstrument = (Maintainable) instrument;
                 System.out.println(maintainableInstrument.clean());
                 System.out.println(maintainableInstrument.inspect());
