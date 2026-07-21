@@ -108,21 +108,132 @@ class StringedInstrument extends Instrument{
     public String getInstrumentDetails(){
         return super.getInstrumentDetails()+", Strings: "+ numberOfStrings;
     }
+
+    public int getNumberOfStrings(){
+        return numberOfStrings;
+    }
 }
 
+// Guitar class 
 class Guitar extends StringedInstrument implements Tunable, Maintainable{
 
     private String guitarType;
 
     public Guitar(String name,int year,int numberOfStrings,String guitarType){
-        super(name, year, guitarType);
+        super(name, year, numberOfStrings);
         this.guitarType=guitarType;
     }
 
     @Override
     public String play(){
-        return "Playing the" + guitarType +"guitar with " + get
+        return "Playing the" + guitarType +"guitar with " + getNumberOfStrings()+" strings";
+    }
+
+    @Override // override parent method to add more details
+    public String getInstrumentDetails(){
+
+        return super.getInstrumentDetails()+ ", Type: "+ guitarType;
+    }
+
+    @Override
+    public String tune(){
+        return "Tuning the " +guitarType +" guitar";
+    }
+
+    @Override
+    public String adjustPitch(boolean up) {
+        return up ? "Increasing pitch of the guitar" : "Decreasing pitch of the guitar";
+    }
+    
+    // Implement methods from Maintainable interface
+    @Override
+    public String clean() {
+        return "Cleaning the " + guitarType + " guitar";
+    }
+    
+    @Override
+    public String inspect() {
+        return "Inspecting the " + guitarType + " guitar from " + year;
     }
 
 
+}
+
+// Piano class
+
+class Piano extends Instrument implements Tunable, Maintainable{
+
+    private boolean isGrand;
+
+    public Piano(String name,int year,boolean isGrand){
+        super(name,year);
+        this.isGrand=isGrand;
+    }
+
+    @Override
+    public String play(){
+        return "Playing the "+ (isGrand ? "grand" : "upright") + "piano";
+    }
+
+    // Override parent method to add more details
+    @Override
+    public String getInstrumentDetails() {
+        return super.getInstrumentDetails() + ", Type: " + (isGrand ? "Grand" : "Upright");
+    }
+    
+    // Implement methods from Tunable interface
+    @Override
+    public String tune() {
+        return "Tuning the piano";
+    }
+    
+    @Override
+    public String adjustPitch(boolean up) {
+        return up ? "Increasing pitch of the piano" : "Decreasing pitch of the piano";
+    }
+    
+    // Implement methods from Maintainable interface
+    @Override
+    public String clean() {
+        return "Cleaning the piano keys and interior";
+    }
+    
+    @Override
+    public String inspect() {
+        return "Inspecting the " + (isGrand ? "grand" : "upright") + " piano from " + year;
+    }
+}
+
+public class MusicShop{
+    public static void main(String []args){
+        Instrument[] instruments =new Instrument[3];
+        instruments[0] = new Guitar("Fender Stractocaster", 2020, 6, "electric");
+        instruments[1] = new Piano("Steinway", 2015,true);
+        instruments[2] = new Guitar("Martin",2018,12,"acoustic");
+
+        System.out.println("===== PLAYING INSTRUMENTS =====");
+        for(Instrument instrument : instruments){
+            System.out.println(instrument.play());
+            System.out.println(instrument.getInstrumentDetails());
+        }
+
+        System.out.println("\n====== MAINTAINING INSTUMENTS =====");
+        for(Instrument instrument:instruments){
+            System.out.println("Working with:" +instrument.getName());
+
+            if(instrument instanceof Tunable)// Does the object stored in instrument implement the Tunable interface 
+                {
+                Tunable tunableInstrument = (Tunable) instrument;
+                System.out.println(tunableInstrument.tune());
+                System.out.println(tunableInstrument.adjustPitch(true));
+            }
+
+              if (instrument instanceof Maintainable) {
+                Maintainable maintainableInstrument = (Maintainable) instrument;
+                System.out.println(maintainableInstrument.clean());
+                System.out.println(maintainableInstrument.inspect());
+            }
+            System.out.println("-----");
+        }
+    }
 }
