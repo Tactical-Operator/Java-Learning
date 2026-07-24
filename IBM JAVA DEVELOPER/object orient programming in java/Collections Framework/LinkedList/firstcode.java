@@ -1,5 +1,3 @@
-
-import java.util.*;
 import java.util.LinkedList;
 class  firstcode 
 {
@@ -9,6 +7,7 @@ class  firstcode
        fruits.add("Mango");
        fruits.add("Apple");
        System.out.println(fruits.get(1));
+       System.out.println(fruits);
 
     }
-}
+}  

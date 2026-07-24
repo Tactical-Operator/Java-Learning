@@ -11,5 +11,6 @@ class firstcode{
         fruits.add("Mango");
 
         System.out.println(fruits.get(1));
+        System.out.println(fruits);
     }
 }
