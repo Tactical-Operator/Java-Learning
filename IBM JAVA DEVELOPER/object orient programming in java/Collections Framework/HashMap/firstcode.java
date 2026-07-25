@@ -4,11 +4,15 @@ class firstcode
 {
     public static void main(String[] args)
     {
-       HashMap<String,Integer> map=new HashMap<>();
+       HashMap<String,Integer> frequency =new HashMap<>();
 
-       
-       System.out.println(map);
-       System.out.println(map.getOrDefault("Apple", 0));
-       System.out.println(map);
+       String[] words={"Apple","Banana","Apple","Mango","Banana","Orange"};
+
+       for(String word:words){
+
+        frequency.put(word,frequency.getOrDefault(word,0)+1);
+       }
+
+       System.out.println(frequency);
     }
 }
