@@ -16,3 +16,5 @@ class firstcode
        System.out.println(frequency);
     }
 }
+
+// to use +1 make sure the value 
