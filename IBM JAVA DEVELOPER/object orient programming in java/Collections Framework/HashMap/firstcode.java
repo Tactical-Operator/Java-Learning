@@ -18,3 +18,4 @@ class firstcode
 }
 
 // to use +1 make sure the value is Integer
+// use getOrDefault when we have to use frequency for any problem.
