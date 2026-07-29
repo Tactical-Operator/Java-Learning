@@ -8,7 +8,7 @@ class  firstcode
        fruits.add("Apple");
        fruits.add("Banana");
        System.out.println(fruits.get(1));
-       System.out.println();
+       System.out.println(2);
        System.out.println(fruits);
 
     }
