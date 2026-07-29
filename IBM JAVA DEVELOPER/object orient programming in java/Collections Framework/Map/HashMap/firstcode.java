@@ -14,6 +14,12 @@ class firstcode
        }
 
        System.out.println(frequency);
+
+       System.out.println(frequency.containsKey("Apple"));
+       System.out.println(frequency.containsValue(2));
+       System.out.println(frequency.size());
+       System.out.println(frequency.remove("Orange"));
+       System.out.println(frequency);
     }
 }
 
