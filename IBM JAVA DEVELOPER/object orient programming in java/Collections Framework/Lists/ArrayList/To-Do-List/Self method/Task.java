@@ -1,3 +1,4 @@
+// a CLASS NAMED task to show how task would look like
 class Task {
 
     private int id;
@@ -6,6 +7,7 @@ class Task {
     private String status;
 
     // constructor so that the variables gets initialized when a object is created 
+    // in other words when a task is created 
     public Task(int id, String task_title, String priority, String status) {
 
         this.id = id;
@@ -13,6 +15,10 @@ class Task {
         this.priority = priority;
         this.status = status;
 
+    }
+
+    public int get_id(){
+        return id;
     }
 
     public String get_task_title(){
@@ -33,8 +39,6 @@ class Task {
         status="completed";
     }
     
-    // ToDoList.java
-    // ControllerMain.java
 
 
 }
