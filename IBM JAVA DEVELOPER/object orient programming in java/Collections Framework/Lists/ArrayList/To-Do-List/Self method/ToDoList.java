@@ -2,7 +2,7 @@
 
 import java.util.*;
 
-public class ToDoList {
+public  class ToDoList {
 
     private ArrayList<Task> tasks;
 
@@ -25,6 +25,7 @@ public class ToDoList {
             System.out.println(task.get_task_title());
             System.out.println(task.get_priority());
             System.out.println(task.get_status());
+            System.out.println();
         }
     }
 

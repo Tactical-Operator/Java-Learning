@@ -8,12 +8,12 @@ class Task {
 
     // constructor so that the variables gets initialized when a object is created 
     // in other words when a task is created 
-    public Task(int id, String task_title, String priority, String status) {
+    public Task(int id, String task_title, String priority) {
 
         this.id = id;
         this.task_title = task_title;
         this.priority = priority;
-        this.status = status;
+        this.status = "Pending";
 
     }
 
