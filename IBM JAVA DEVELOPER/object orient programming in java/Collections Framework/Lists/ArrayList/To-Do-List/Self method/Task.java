@@ -36,7 +36,7 @@ class Task {
     // status can only be updated by Task class 
     // because status is a private variable
     public void markCompleted(){
-        status="completed";
+        status="  Pending";
     }
     
 

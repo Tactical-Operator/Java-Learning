@@ -40,7 +40,7 @@ public  class ToDoList {
             {
                 task.markCompleted();
 
-                System.out.println("  Test marked as completed");
+                System.out.println("  Task marked as completed");
 
                 return;
             }
