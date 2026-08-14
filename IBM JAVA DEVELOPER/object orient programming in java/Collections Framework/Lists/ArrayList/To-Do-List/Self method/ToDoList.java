@@ -19,15 +19,34 @@ public  class ToDoList {
 
     public void displayTasks() {
 
+        tasks.sort(Comparator.comparingInt(task ->{
+            switch (task.get_priority()) {
+                case "High":
+                    return 1;
+                
+                case "Medium":
+                    return 2;
+                 
+                case "Low":
+                    return 3;    
+                    
+            
+                default:
+                    return 4;
+            }
+        }));
+
         for (Task task : tasks) {
 
-           System.out.println(" _______________________________");
-           System.out.println("|                               |");
-           System.out.printf("|  ID = %-24s|%n", task.get_id());
-           System.out.printf("|  Title = %-21s|%n", task.get_task_title());
-           System.out.printf("|  Priority = %-18s|%n", task.get_priority());
-           System.out.printf("|  Status = %-20s|%n", task.get_status());
-           System.out.println("|_______________________________|");
+           System.out.println(" _________________________________");
+           System.out.println("|                                 |");
+           
+           System.out.printf("|  ID       = %-20s|%n", task.get_id());           
+           System.out.printf("|  Title    = %-20s|%n", task.get_task_title());           
+           System.out.printf("|  Priority = %-20s|%n", task.get_priority());           
+           System.out.printf("|  Status   = %-20s|%n", task.get_status());
+           
+           System.out.println("|_________________________________|");           
            System.out.println();
         }
     }
@@ -40,7 +59,7 @@ public  class ToDoList {
             {
                 task.markCompleted();
 
-                System.out.println("  Task marked as completed");
+                System.out.println("  Task marked as completed for id = "+id);
 
                 return;
             }
