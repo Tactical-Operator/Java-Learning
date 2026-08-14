@@ -1,6 +1,0 @@
-make a new to do list using array-list 
-
-using classes and main method
-
-complete it by 6/8/2026 positively.
-complete it or gay
