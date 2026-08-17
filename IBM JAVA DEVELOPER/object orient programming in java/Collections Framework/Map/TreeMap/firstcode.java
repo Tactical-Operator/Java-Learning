@@ -7,8 +7,16 @@ class firstcode
 
        map.put(3,"Apple");
        map.put(1,"Mango");
-       map.put(2,"banana");
+       map.put(2,"");
 
        System.out.println(map);
+       for(int key : map.keySet()){
+        System.out.println(key+". " + map.get(key));
+        ////
+       }
+
+       if(map.containsValue("Mango")){
+        System.out.println("Mango exists");
+       }
     }
 }
