@@ -4,13 +4,14 @@ import java.util.*;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class file_writer{
+public class File_Write{
     public static void main(String[] args) {
         
         try{
-            FileWriter writer = new FileWriter("test.txt");
+            FileWriter writer = new FileWriter("test.txt",true);
+                                                                        // true means: append mode 
 
-            writer.write("Hello Operator\n");
+            writer.write("\nHello Operator\n");
             writer.write("Mission 1 : Destroy Naxals");
 
             writer.close();
