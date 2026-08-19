@@ -10,7 +10,7 @@ public class file_writer{
         try{
             FileWriter writer = new FileWriter("test.txt");
 
-            writer.write(" Hello Operator\n");
+            writer.write("Hello Operator\n");
             writer.write("Mission 1 : Destroy Naxals");
 
             writer.close();
