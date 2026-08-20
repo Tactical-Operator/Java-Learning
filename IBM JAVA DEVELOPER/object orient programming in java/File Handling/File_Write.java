@@ -1,6 +1,6 @@
 // Writing to file code 
 
-import java.util.*;
+
 import java.io.FileWriter;
 import java.io.IOException;
 

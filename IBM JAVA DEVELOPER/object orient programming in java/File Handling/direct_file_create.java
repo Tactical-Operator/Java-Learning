@@ -1,6 +1,6 @@
 // code to create a file directly
 
-import java.util.*;
+
 import java.io.File;
 import java.io.IOException;
 class direct_file_create 
