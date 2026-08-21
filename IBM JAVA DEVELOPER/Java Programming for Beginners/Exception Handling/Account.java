@@ -8,12 +8,13 @@ class Bank {
     void withdraw(int balance, int amount) throws LowBalanceException {
         try {
             if (amount > balance) {
-                throw new LowBalanceException("insufficient Balance");
+                throw new LowBalanceException("insufficient Balance the amount must be less than balance\n");
             }
 
             System.err.println("MOney Wihdrawn");
         } finally {
-            System.out.println("Transaction finished");
+            System.out.println();
+            System.out.println("Transaction finished\n");
         }
     }
 }
