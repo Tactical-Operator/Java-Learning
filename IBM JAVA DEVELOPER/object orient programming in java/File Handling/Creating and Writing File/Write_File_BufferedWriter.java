@@ -1,4 +1,4 @@
-import java.util.*;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -17,6 +17,6 @@ class Write_File_BufferedWriter {
        }
        catch(IOException e){
         System.out.println("Error" + e.getMessage());
-       }
+       } 
     }
 }
